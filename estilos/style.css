@@ -17,9 +17,9 @@
 :root {
   --background: #f5f5f5;
   --text: #222222;
-  --text-dark: #ffffff;
-  --secondary: #0077ff;
-  --secondary-dark: #66bbff;
+  --text-contrast: #ffffff;
+  --primary: #0077ff;
+  --primary-contrast: #66bbff;
   --card: #ffffff;
 }
 
@@ -31,7 +31,7 @@ body {
 }
 
 header {
-  background-color: var(--secondary);
+  background-color: var(--primary);
   color: var(--text);
   padding: 10px;
   display: flex;
@@ -47,7 +47,7 @@ header {
 
 #menu a {
   text-decoration: none;
-  color: var(--text-dark);
+  color: var(--text-contrast);
   font-weight: 600;
   padding: 12px 15px;
   border-radius: 5px;
@@ -57,6 +57,58 @@ header {
 }
 
 #menu a:hover {
-  background-color: var(--secondary-dark);
+  background-color: var(--primary-contrast);
   color: var(--secondary);
+}
+
+main {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#profile {
+  background-color: var(--card);
+  padding: 20px;
+  border-radius: 10px;
+  grid-column: 2;
+}
+
+#profile img.picture {
+  width: 200px;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 50%;
+  border: 3px solid var(--card);
+  outline: 2px solid var(--primary);
+  display: block;
+  margin: auto;
+  margin-bottom: 15px;
+}
+
+#profile h1 {
+  color: var(--primary);
+  margin: 15px 0;
+  font-size: 1.5em;
+  text-align: center;
+}
+
+#social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5em;
+  gap: 1em;
+  margin-top: 15px;
+}
+
+#social a {
+  color: var(--primary);
+  transition: color 0.5s;
+}
+
+#social a:hover {
+  color: var(--primary-contrast);
 }
