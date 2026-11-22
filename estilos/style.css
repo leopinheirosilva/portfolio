@@ -8,6 +8,8 @@
   --fundo-card
 */
 
+@import url("https://fonts.googleapis.com/css2?family=Geist:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -17,6 +19,7 @@
 :root {
   --background: #f5f5f5;
   --text: #222222;
+  --text-muted: #222222a2;
   --text-contrast: #ffffff;
   --primary: #0077ff;
   --primary-contrast: #66bbff;
@@ -24,7 +27,7 @@
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-family: "Geist", sans-serif;
   line-height: 1.4em;
   background-color: var(--background);
   color: var(--text);
@@ -39,6 +42,11 @@ header {
   align-content: center;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text);
+}
+
 #menu ul {
   list-style: none;
   display: flex;
@@ -46,7 +54,6 @@ header {
 }
 
 #menu a {
-  text-decoration: none;
   color: var(--text-contrast);
   font-weight: 600;
   padding: 12px 15px;
@@ -139,9 +146,9 @@ article h2 {
 
 .course {
   background-color: var(--background);
+  padding: 15px;
   border-radius: 10px;
   border-left: 5px solid var(--primary-contrast);
-  padding: 15px;
   transition:
     border-width 0.5s,
     border-color 0.5s;
@@ -155,11 +162,82 @@ article h2 {
 
 .course .period {
   font-size: 0.8em;
-  font-weight: bold;
+  font-weight: 500;
   color: var(--text);
 }
 
 .course .title {
-  color: var(--primary);
+  color: var(--text);
   font-size: 1em;
+}
+
+.course .institution {
+  color: var(--text-muted);
+}
+
+#project-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: var(--background);
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 5px solid var(--primary-contrast);
+  transition:
+    border-width 0.5s,
+    border-color 0.5s;
+}
+
+.project:hover {
+  border-color: var(--primary);
+  border-left-width: 10px;
+  cursor: pointer;
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.project .title {
+  font-size: 1.2em;
+  margin-bottom: 10px;
+}
+
+.project .description {
+  color: var(--text-muted);
+}
+
+@media screen and (min-width: 768px) {
+  .project {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+  }
+
+  .odd{
+    flex-direction: row;
+  }
+
+  .project-info {
+    max-width: 70%;
+  }
+
+  .project-image {
+    aspect-ratio: 1/1;
+    max-width: 30%;
+    max-height: 230px;
+  }
+
+  .project .description {
+    width: 80%;
+  }
 }
