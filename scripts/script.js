@@ -1,4 +1,4 @@
-const botao = document.getElementById("botao-tema");
+const button = document.getElementById("theme-button");
 const body = document.body;
 
 // Persistência do tema
@@ -9,14 +9,14 @@ temaEscuro(temasalvo === "escuro");
 function temaEscuro(tipo) {
   if (tipo == true) {
     body.classList.add("escuro");
-    botao.innerHTML = '<i class="fa-solid fa-sun"></i>';
+    button.innerHTML = '<i class="fa-solid fa-sun"></i>';
   } else {
     body.classList.remove("escuro");
-    botao.innerHTML = '<i class="fa-solid fa-moon"></i>';
+    button.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
 
-botao.addEventListener("click", () => {
+button.addEventListener("click", () => {
   const isescuro = body.classList.toggle("escuro");
   temaEscuro(isescuro);
   localStorage.setItem("tema", isescuro ? "escuro" : "claro");
