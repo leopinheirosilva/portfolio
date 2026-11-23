@@ -284,7 +284,7 @@ footer {
   padding-top: 25px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 800px) {
   #menu .nav-link {
     display: block;
   }
