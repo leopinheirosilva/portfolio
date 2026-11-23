@@ -4,6 +4,8 @@
 
 ---
 
+![imagem de demonstração da página](images/demo.png)
+
 ## 🎯 Objetivo do Projeto
 
 O objetivo principal deste projeto é centralizar e apresentar a trajetória profissional, competências técnicas e os principais projetos desenvolvidos por **Leonardo Pinheiro**, atuando como Desenvolvedor Full-Stack.
@@ -27,7 +29,7 @@ O portfólio funciona como uma Single Page Application (SPA) estática, prioriza
   - **Aparatus**: SaaS de agendamento em barbearias em tempo real com assistente inteligente (Agenda.ai) integrada.
   - **Fintrack**: Dashboard financeira para gestão e rastreamento de receitas/despesas desenvolvida com React + Vite e Tailwind CSS.
 - **🌓 Alternância de Tema (Dark/Light Mode)**: Suporte dinâmico a modo escuro e claro com persistência automática da preferência do usuário via `localStorage`.
-- **🧭 Navegação Fluida**: Menu fixo com *smooth scrolling* que calcula a compensação de altura do cabeçalho.
+- **🧭 Navegação Fluida**: Menu fixo com _smooth scrolling_ que calcula a compensação de altura do cabeçalho.
 - **📱 Design 100% Responsivo**: Layout flexível e adaptável para qualquer resolução de tela (smartphones, tablets e monitores desktop).
 
 ---
@@ -35,7 +37,7 @@ O portfólio funciona como uma Single Page Application (SPA) estática, prioriza
 ## 🛠️ Tecnologias Utilizadas
 
 - **HTML5**: Estrutura semântica e acessível.
-- **CSS3**: Estilização moderna, variáveis CSS (*custom properties*), Flexbox, CSS Grid e Media Queries para responsividade.
+- **CSS3**: Estilização moderna, variáveis CSS (_custom properties_), Flexbox, CSS Grid e Media Queries para responsividade.
 - **JavaScript (ES6+)**: Manipulação eficiente do DOM, lógica de alternância de tema e cálculo de rolagem suave.
 - **Font Awesome**: Ícones vetoriais para interface, navegação e redes sociais.
 
@@ -67,12 +69,14 @@ portfolio/
 Como o projeto é construído exclusivamente com tecnologias web nativas, nenhuma etapa de compilação ou instalação de dependências é necessária.
 
 ### 1. Clonar o repositório
+
 ```bash
 git clone https://github.com/leopinheirosilva/portfolio.git
 cd portfolio
 ```
 
 ### 2. Abrir o projeto
+
 Você pode abrir o projeto diretamente no navegador de três formas:
 
 - **Diretamente no navegador**:
