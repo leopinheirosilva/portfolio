@@ -2,24 +2,24 @@ const button = document.getElementById("theme-button");
 const body = document.body;
 
 // Persistência do tema
-const temasalvo = localStorage.getItem("tema");
-temaEscuro(temasalvo === "escuro");
+const savedTheme = localStorage.getItem("theme");
+toggleTheme(savedTheme === "dark");
 
 // Função para alternar entre tema claro e escuro
-function temaEscuro(tipo) {
-  if (tipo == true) {
-    body.classList.add("escuro");
-    button.innerHTML = '<i class="fa-solid fa-sun"></i>';
+function toggleTheme(theme) {
+  if (theme == true) {
+    body.classList.add("dark");
+    button.innerHTML = '<i class="fa-solid fa-circle-half-stroke"></i>';
   } else {
-    body.classList.remove("escuro");
+    body.classList.remove("dark");
     button.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 }
 
 button.addEventListener("click", () => {
-  const isescuro = body.classList.toggle("escuro");
-  temaEscuro(isescuro);
-  localStorage.setItem("tema", isescuro ? "escuro" : "claro");
+  const isDark = body.classList.toggle("dark");
+  toggleTheme(isDark);
+  localStorage.setItem("theme", isDark ? "dark" : "light");
 });
 
 // Scroll suave para links de navegação

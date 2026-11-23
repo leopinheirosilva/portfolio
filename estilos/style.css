@@ -26,17 +26,30 @@
   --card: #ffffff;
 }
 
+.dark {
+  --background: #222222;
+  --text: #e0e0e0e0;
+  --text-muted: #e0e0e0cb;
+  --text-contrast: #333333;
+  --primary: #945bff;
+  --primary-contrast: #af84ff;
+  --card: #2c2c2c;
+}
+
 body {
   font-family: "Geist", sans-serif;
   line-height: 1.4em;
   background-color: var(--background);
   color: var(--text);
+  transition:
+    background-color 0.5s,
+    color 0.5s;
 }
 
 header {
   background-color: var(--primary);
   color: var(--text);
-  padding: 10px;
+  padding: 3px 10px;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -62,7 +75,7 @@ a {
   color: var(--text-contrast);
   font-weight: 600;
   padding: 12px 15px;
-  border-radius: 5px;
+  border-radius: 10px;
   transition:
     background-color 0.5s,
     color 0.5s;
@@ -70,7 +83,7 @@ a {
 
 #menu a:hover {
   background-color: var(--primary-contrast);
-  color: var(--secondary);
+  color: var(--text-muted);
 }
 
 #menu .nav-link {
@@ -85,11 +98,16 @@ main {
   margin-bottom: 20px;
 }
 
+article {
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.09);
+}
+
 #profile {
   background-color: var(--card);
   padding: 20px;
   border-radius: 10px;
   grid-column: 2;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.09);
 }
 
 #profile img.picture {
@@ -171,7 +189,7 @@ article h2 {
 
 .course:hover {
   border-color: var(--primary);
-  border-left-width: 10px;
+  border-left-width: 20px;
   cursor: pointer;
 }
 
@@ -211,7 +229,7 @@ article h2 {
 
 .project:hover {
   border-color: var(--primary);
-  border-left-width: 10px;
+  border-left-width: 20px;
   cursor: pointer;
 }
 
@@ -233,7 +251,7 @@ article h2 {
 }
 
 footer {
-  background-color: #dadada;
+  background-color: rgba(0, 0, 0, 0.199);
   color: var(--text);
   text-align: center;
   padding: 15px;
@@ -249,19 +267,24 @@ footer {
     grid-template-columns: auto 400px 1fr auto;
   }
 
+  #menu a {
+    color: var(--text-contrast);
+    border-radius: 20px;
+  }
+
   #profile {
     grid-column: 2 / 3;
     height: calc(100vh - 105px);
     height: calc(100dvh - 105px);
     position: sticky;
-    top: 85px;
+    top: 65px;
     overflow-y: auto;
   }
 
   #profile p {
     text-align: left;
   }
-  
+
   #details {
     grid-column: 3 / 4;
   }
